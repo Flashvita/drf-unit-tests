@@ -1,17 +1,21 @@
 
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Настройки для запуска>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-==================================================================================================
-1)Создаём папку "Название проекта" 
-2)Создаём виртуальное окружение python3 -m venv env
-3)Активируем source env/bin/activate
-4)Переходим в наш проект cd calling и устанавливаем зависимости pip install -r requirements.txt
-5)Создаём бд postgresql, инструкция https://djangocentral.com/using-postgresql-with-django/
-6)python manage.py makemigrations
-7)python manage.py migrate
-8)python manage.py createsuperuser(создаём супер пользователя пользователя для доступа в админку)
-9)Запускаем проект python manage.py runserver
-===================================================================================================
-<<<<<<<<<<<<<<<<<<<<<<<<<<=====================Info==================>>>>>>>>>>>>>>>>>>>>>>>>>>
-админ панель -------------http://127.0.0.1:8000/api/admin/
-документация swagger------http://127.0.0.1:8000/api/docs/swagger/
-документация redoc--------http://127.0.0.1:8000/api/docs/redoc/
+Создайм виртуальное окружение и устанавливаем зависимости 
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+
+Создаём базу данных postgresql 
+sudo -u postgres psql
+CREATE DATABASE calldb;
+CREATE USER calluser WITH ENCRYPTED PASSWORD '12345test
+ALTER ROLE myuser SET client_encoding TO 'utf8';
+ALTER ROLE myuser SET default_transaction_isolation TO 'read committed';
+ALTER ROLE myuser SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE calldb TO calluser;
+
+Создаём и применяем миграции
+python manage.py makemigrations
+python manage.py migrate
+
+Запускаем тесты
+Запускаем тесты ./manage.pyy test

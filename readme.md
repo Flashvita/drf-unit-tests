@@ -19,4 +19,4 @@
 ###### python manage.py migrate
 
 ## Запускаем тесты
-###### ./manage.pyy test
+###### ./manage.py test

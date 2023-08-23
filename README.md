@@ -1,9 +1,9 @@
 # Тестирование с помощью unit test бекенда на django rest framework
 #### Для запуска под Linux Ubuntu(Без докера)
-#### Создаём виртуальное окружение и устанавливаем зависимости: 
-  python3 -m venv env
-  source env/bin/activate
-  pip install -r requirements.txt
+#### Создаём виртуальное окружение и устанавливаем зависимости 
+    python3 -m venv env
+    source env/bin/activate
+    pip install -r requirements.txt
 #### В терминале подключаемся к postgresql:
   sudo -u postgres psql
 #### Создаём базу данных postgresql и пользователя с привелегиями:

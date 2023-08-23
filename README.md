@@ -1,4 +1,4 @@
-# Тестирование с помощью unit test бекенда на django rest framework
+# Тестирование с помощью unit test бэкенда на django rest framework
 #### Для запуска под Linux Ubuntu(Без докера)
 #### Создаём виртуальное окружение и устанавливаем зависимости 
     python3 -m venv env

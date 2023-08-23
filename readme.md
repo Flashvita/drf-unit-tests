@@ -5,7 +5,7 @@
   source env/bin/activate
   pip install -r requirements.txt
 #### В терминале подключаемся к postgresql:
-    sudo -u postgres psql
+  sudo -u postgres psql
 #### Создаём базу данных postgresql и пользователя с привелегиями:
   CREATE DATABASE calldb;
   CREATE USER calluser WITH ENCRYPTED PASSWORD '12345test';
